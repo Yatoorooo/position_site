@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+.conteiner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 15px;
+}
+.icon {
+  color: #000;
+}
+
+.links_content {
+  list-style: none;
+}
+.icon_size {
+  font-size: 50px;
+}
+.links_item {
+  position: relative;
+  cursor: pointer;
+
+  padding: 50px 0px;
+  transition: all 0.3s ease;
+}
+.links_item:hover .list {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.header {
+  background-color: rgba(120, 120, 120, 0.7);
+
+  box-shadow: 13px 10px 30px 9px #000;
+  border-radius: 5px 5px 20px 20px;
+}
+.link_size {
+  font-size: 24px;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.link_size:hover {
+  color: white;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.links_content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.other_page {
+  display: flex;
+  align-items: center;
+}
+.other_page {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.link_menu {
+  padding: 10px;
+  border: 1px solid black;
+  list-style: none;
+  cursor: pointer;
+}
+.link_menu:hover .list_about {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0px);
+}
+.list {
+  position: absolute;
+  top: 129px;
+  background-color: rgba(120, 120, 120, 0.7);
+  box-shadow: 3px 3px 10px 1px;
+  left: 0;
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 250px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  transform: translateY(-129px);
+}
+.about_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list_about {
+  position: absolute;
+  top: 129px;
+  background-color: rgba(120, 120, 120, 0.7);
+  box-shadow: 3px 3px 10px 1px;
+  left: 247px;
+  top: 102px;
+  width: 200px;
+  border-radius: 10px;
+  border: 1px solid black;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  transform: translateX(-247px);
+}
