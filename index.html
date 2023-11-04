@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="./node_modules/material-icons/iconfont/material-icons.css">
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./style.js">
 </head>
 <body>
    <header class="header">
@@ -48,23 +47,6 @@
                 </li>
                 <li class="links_item"><a class="link_size" href="">Contact</a></li>
                 <li class="links_item"><a class="link_size" href="">Other</a></li>
-                <script>
-                    let listItems = document.querySelectorAll('li');
-                    
-            
-                    listItems.forEach(function(item) {
-                        item.addEventListener('mouseover', function() {
-                            let currentSelected = document.querySelector('.selected');
-                            if (currentSelected) {
-                                currentSelected.classList.remove('selected');
-                            }
-                            this.classList.add('selected');
-                        });
-                    });
-                    
-                
-                    
-                    </script>
             </ul>
         </nav>
 
