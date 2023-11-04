@@ -31,7 +31,9 @@ body {
   padding: 50px 0px;
   transition: all 0.3s ease;
 }
-.links_item:hover .list {
+.links_item:hover .parrent,
+.link_menu:hover .child,
+ .links_item:hover .parrent:hover .child{
   visibility: visible;
   opacity: 1;
   transform: translateY(0px);
@@ -73,18 +75,20 @@ body {
   align-items: center;
   gap: 10px;
 }
-
+.about_list{
+  cursor: pointer;
+}
+.about_list:hover{
+  color: #fff;
+}
 .link_menu {
   padding: 10px;
   border: 1px solid black;
   list-style: none;
   cursor: pointer;
+  position: relative;
 }
-.link_menu:hover .list_about {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(0px);
-}
+
 .list {
   position: absolute;
   top: 129px;
@@ -96,14 +100,17 @@ body {
   width: 250px;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   transform: translateY(-129px);
+  z-index: 1;
 }
 .about_list {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
+
 
 .list_about {
   position: absolute;
@@ -111,12 +118,17 @@ body {
   background-color: rgba(120, 120, 120, 0.7);
   box-shadow: 3px 3px 10px 1px;
   left: 247px;
-  top: 102px;
+  top: -2px;
   width: 200px;
   border-radius: 10px;
   border: 1px solid black;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   transform: translateX(-247px);
+  z-index: 0;
+}
+
+.selected{
+  color: #fff;
 }

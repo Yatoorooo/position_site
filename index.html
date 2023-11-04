@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="./node_modules/material-icons/iconfont/material-icons.css">
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./style.js">
 </head>
 <body>
    <header class="header">
@@ -18,23 +19,23 @@
             <ul class="links_content">
                 <li class="links_item"><a class="link_size" href="">Main page</a></li>
                 <li class="links_item"><a class="link_size" href="">About page</a></li>
-                <li class="links_item">
+                <li class="links_item ">
                     <div class="other_page">
                     <span class="link_size">Other page</span>
                     <span class="material-icons-outlined"> expand_more</span>
                 </div>
               
-                    <ul class="list">
+                    <ul class="list parrent">
                         <li class="link_menu"><a class="link_size " href="">Another</a></li>
                         <li class="link_menu"><a class="link_size" href="">Photo</a></li>
-                        <li class="link_menu">
-                        <div class="about_list">
+                        <li class="link_menu ">
+                        <div  class="about_list">
                             <span class="link_size">About author</span>
                             <span class="material-icons-outlined">
                                 arrow_forward_ios
                                 </span>
                         </div>
-                        <ul class="list_about">
+                        <ul class="list_about child .cursor-over-other-page">
                          <li class="link_menu"><a class="link_size" href="">Photo</a></li>
                          <li class="link_menu"><a class="link_size" href="">Another</a></li>
                          <li class="link_menu"><a class="link_size" href="">About page</a></li>
@@ -47,6 +48,23 @@
                 </li>
                 <li class="links_item"><a class="link_size" href="">Contact</a></li>
                 <li class="links_item"><a class="link_size" href="">Other</a></li>
+                <script>
+                    let listItems = document.querySelectorAll('li');
+                    
+            
+                    listItems.forEach(function(item) {
+                        item.addEventListener('mouseover', function() {
+                            let currentSelected = document.querySelector('.selected');
+                            if (currentSelected) {
+                                currentSelected.classList.remove('selected');
+                            }
+                            this.classList.add('selected');
+                        });
+                    });
+                    
+                
+                    
+                    </script>
             </ul>
         </nav>
 
