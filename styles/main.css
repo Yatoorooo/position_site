@@ -20,10 +20,13 @@ body {
 
 .links_content {
   list-style: none;
+  
 }
 .icon_size {
   font-size: 50px;
 }
+
+
 .links_item {
   position: relative;
   cursor: pointer;
@@ -31,9 +34,11 @@ body {
   padding: 50px 0px;
   transition: all 0.3s ease;
 }
-.links_item:hover .parrent,
-.link_menu:hover .child,
- .links_item:hover .parrent:hover .child{
+
+
+.links_item:hover .list,
+.link_menu:hover .list_about,
+ .links_item:hover{
   visibility: visible;
   opacity: 1;
   transform: translateY(0px);
@@ -55,6 +60,13 @@ body {
 .link_size:hover {
   color: white;
 }
+
+
+
+.hover_link:hover .l_hover,
+.child_link:hover .l_about{
+  color: #fff;
+}
 .flex {
   display: flex;
   justify-content: space-between;
@@ -66,17 +78,27 @@ body {
   gap: 20px;
   flex-wrap: wrap;
 }
+
 .other_page {
   display: flex;
   align-items: center;
-}
-.other_page {
-  display: flex;
-  align-items: center;
+  justify-content: space-between;
   gap: 10px;
+
+}
+.hover{
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hover:hover{
+  color: #fff;
 }
 .about_list{
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
 }
 .about_list:hover{
   color: #fff;
@@ -100,16 +122,12 @@ body {
   width: 250px;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   transform: translateY(-129px);
-  z-index: 1;
-}
-.about_list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  
   cursor: pointer;
 }
+
 
 
 .list_about {
@@ -124,8 +142,8 @@ body {
   border: 1px solid black;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   transform: translateX(-247px);
-  z-index: 0;
+  
+  cursor: pointer;
 }
-
