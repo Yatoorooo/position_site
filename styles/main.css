@@ -55,17 +55,22 @@ body {
   text-decoration: none;
   color: #000;
   cursor: pointer;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
 }
 .link_size:hover {
   color: white;
 }
-
-
-
+.child_link{
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hover_link{
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 .hover_link:hover .l_hover,
 .child_link:hover .l_about{
-  color: #fff;
+color: #fff;
 }
 .flex {
   display: flex;
